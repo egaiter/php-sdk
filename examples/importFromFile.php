@@ -1,7 +1,8 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Constant Contact API v2 Upload File Example</title>
+    <title>Constant Contact API v2 Upload Contact File Example</title>
+
     <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
 </head>
@@ -45,7 +46,9 @@ foreach ($listsResult as $list) {
 
 <body>
 <div class="well">
-    <h3>Upload a New Image or PDF</h3>
+
+    <h3>Import a spreadsheet of Contacts (.xls, .xlsx, .csv, .txt)</h3>
+
 
     <form class="form-horizontal" name="submitFile" id="submitFile" method="POST" action="importFromFile.php" enctype="multipart/form-data">
         <div class="control-group">
@@ -86,7 +89,9 @@ foreach ($listsResult as $list) {
 </div>
 
 <?php
-// print the contents of the file upload status to screen
+
+// print the details of the contact upload status to screen
+
 if (isset($fileUploadStatus)) {
 echo '<span class="label label-success">File Uploaded!</span>';
 echo '<div class="container alert-success"><pre class="success-pre">';
